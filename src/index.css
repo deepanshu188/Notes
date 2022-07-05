@@ -1,13 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  line-height: 50vh;
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
+  user-select: none;
+}
+
+.add-icon {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(16, 90, 209, 0.9);
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #fff;
+  box-shadow: 0 2px 2px #777;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+.add-icon:hover {
+  background-color: rgba(16, 90, 209, 1);
+}
+
+.add-task {
+  height: 26px;
+  outline: none;
+  resize: none;
+  border: 1px solid #ff0000;
+  margin: 5px 0;
+  padding: 2px 6px;
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(0.6);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.task-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  height: 90px;
+  width: 330px;
+  padding: 8px 12px;
+  animation: resize 1s ease;
+  border-radius: 8px;
+  font-family: "Inconsolata", monospace;
+}
+
+.confirmation {
+  display: flex;
+  justify-content: center;
+}
+
+.popup-name {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.add {
+  background: #6050dc;
+  margin-right: 16px;
+}
+
+.cancel {
+  background: #bf0a30;
+  margin-left: 16px;
+}
+
+.btn {
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.app {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.backdrop {
+  background: #16161d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.card {
+  border: 2px solid black;
+  width: 96vw;
+  height: 150px;
+  margin: 6px;
+  border-radius: 8px;
+  background-color: #23083e;
+  font-family: "Inconsolata", monospace;
+}
+
+.card p {
+  margin: 12px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
 }
